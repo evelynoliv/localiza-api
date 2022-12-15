@@ -5,7 +5,7 @@ import { apiGetState } from "../../services/apiService";
 import { getStateData, setSelectedState } from "../../redux/actions/index";
 
 function SelectState() {
-  const ufData = useSelector(getUfData);
+  const stateData = useSelector(getUfData);
 
   const dispatch = useDispatch();
 
@@ -30,7 +30,7 @@ function SelectState() {
     <div>
       <div>
         {
-          ufData?.length > 0 ? (
+          stateData?.length > 0 ? (
             <div className="custom-select">
               <span className="arrow active">
                 <svg
@@ -51,7 +51,7 @@ function SelectState() {
                   Escolha um Estado
                 </option>
 
-                {ufData?.map((item, id) => {
+                {stateData?.map((item, id) => {
                   return (
                     <option value={item.id} key={id}>
                       {item.nome}
@@ -61,7 +61,7 @@ function SelectState() {
               </select>
             </div>
           ) : null
-          // <h2> loading all uf</h2>
+    
         }
       </div>
     </div>
