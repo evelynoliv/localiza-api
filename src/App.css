@@ -24,7 +24,7 @@ code {
 
 /* Custom Select */
 .custom-select {
-  animation: show 300ms ease-in-out forwards;
+  animation: show 500ms ease-in-out forwards;
   position: relative;
   
 }

@@ -5,14 +5,14 @@ import { getSelectedUf, getStateTown } from "../../redux/selectors/index";
 import { apiGetTown } from "../../services/apiService";
 
 function SelectTown() {
-  const selectedUf = useSelector(getSelectedUf);
-  const townsOfState = useSelector(getStateTown);
+  const selectedState = useSelector(getSelectedUf);
+  const stateTown = useSelector(getStateTown);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    async function getApiTowns() {
+    async function getApiTown() {
       try {
-        const towns = await apiGetTown(selectedUf);
+        const towns = await apiGetTown(selectedState);
         dispatch(setTownState(towns));
       } catch (error) {
         console.log(error.message);
@@ -20,9 +20,9 @@ function SelectTown() {
     }
     dispatch(setTownData([]));
     dispatch(setTownState([]));
-    getApiTowns();
+    getApiTown();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedUf]);
+  }, [selectedState]);
 
   function handleTownSelectChange(e) {
     dispatch(setSelectedTown(e.target.value));
@@ -32,7 +32,7 @@ function SelectTown() {
     <div>
       <div>
         {
-          townsOfState?.length > 0 ? (
+          stateTown?.length > 0 ? (
             <div className="custom-select" style={{ marginLeft: "50px" }}>
               <span className="arrow active">
                 <svg
@@ -53,7 +53,7 @@ function SelectTown() {
                   Escolha um Municipio
                 </option>
 
-                {townsOfState?.map((item, id) => {
+                {stateTown?.map((item, id) => {
                   return (
                     <option value={item.id} key={id}>
                       {item.nome}
