@@ -19,8 +19,8 @@ function SelectState() {
       }
     }
     getApiData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    
+  }, [dispatch]);
 
   function handleSelectChange(e) {
     dispatch(setSelectedState(e.target.value));
