@@ -1,0 +1,6 @@
+.footer-container {
+    font-weight: bold;
+    display: flex !important;
+    background-color: #0c326f;
+    margin-top: 80px;
+}
