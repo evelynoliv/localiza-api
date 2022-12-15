@@ -7,7 +7,6 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-radius: 16px;
     width: 350px;
     min-height: 145px;
     animation: showCard 300ms ease-in-out forwards;

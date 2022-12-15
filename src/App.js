@@ -1,9 +1,9 @@
 import CityDetails from "./components/CityDetails/CityDetails";
 import SelectState from "./components/SelectState/SelectState";
 import SelectTown from "./components/SelectTown/SelectTown";
-import "./App.css";
 import menino from "./assets/images/menino.png"
-import Footer from "./components/Footer/Footer";
+import "./App.css";
+
 
 function App() {
   return (
@@ -17,7 +17,6 @@ function App() {
         <SelectTown />
       </div>
       <CityDetails />
-      <Footer />
     </div>
   );
 }
