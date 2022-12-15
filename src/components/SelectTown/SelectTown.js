@@ -21,8 +21,8 @@ function SelectTown() {
     dispatch(setTownData([]));
     dispatch(setTownState([]));
     getApiTown();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedState]);
+    
+  }, [dispatch,selectedState]);
 
   function handleTownSelectChange(e) {
     dispatch(setSelectedTown(e.target.value));
@@ -63,7 +63,7 @@ function SelectTown() {
               </select>
             </div>
           ) : null
-          // <h2> loading</h2>
+          
         }
       </div>
     </div>
