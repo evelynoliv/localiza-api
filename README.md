@@ -1,6 +1,6 @@
 # LOCALIZA-API
 
-LINK DO PROKETO: https://localiza-api.vercel.app/
+LINK DO PROJETO: https://localiza-api.vercel.app/
 
 ## Desafio para desenvolvedor Front-end
 
